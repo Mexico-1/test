@@ -1,0 +1,63 @@
+*{
+margin: 0;
+padding: 0;
+}
+body{
+    background: linear-gradient(#01012e,#240019);
+    height: 30vh;
+}
+section{
+    background: url('stars1.png');
+    height: 300vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+ul{
+    text-align: center;
+}
+ul:hover li img{
+    opacity: 0;
+}
+ul li{
+    list-style: none;
+    margin: 14px 0;
+}
+ul li img{
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 500;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background: darkblue;
+    padding: 5px 10px;
+    border-radius: 30px;
+    display:inline-block;
+    width: 200px;
+    transition: 0.5s;
+}
+ul li img:hover{
+    transform: scale(1.5);
+    background: #01012e;
+    opacity: 1;
+}
+ul li::after{
+    content:attr(data-text);
+    color: #fff;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    font-size: 80px;
+    font-weight: 900;
+    text-transform: uppercase;
+    opacity: 0;
+    letter-spacing: 50px;
+    pointer-events: none; 
+    transition: 0.5s;   
+}
+ul li:hover::after{
+    opacity: 0.5;
+    letter-spacing:5px;
+}
+
+
+
